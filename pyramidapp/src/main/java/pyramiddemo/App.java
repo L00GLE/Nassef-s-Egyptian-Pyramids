@@ -133,12 +133,24 @@ public class App
     }
   }
 
+  // print all pyramids
+  private void printAllPyramids() {
+    for (int i = 0; i < pyramidArray.length; i++) {
+      printMenuLine();
+      pyramidArray[i].print();
+      printMenuLine();
+    }
+  }
+
   private Boolean executeCommand(Scanner scan, Character command) {
     Boolean success = true;
 
     switch (command) {
       case '1':
         printAllPharaoh();
+        break;
+      case '3':
+        printAllPyramids();
         break;
       case 'q':
         System.out.println("Thank you for using Nassef's Egyptian Pyramid App!");

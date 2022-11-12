@@ -17,4 +17,7 @@ public class Pyramid {
     name = pyramidName;
     contributors = pyramidContributors;
   }
+
+public void print() {
+}
 }
