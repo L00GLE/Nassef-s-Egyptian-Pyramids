@@ -1,6 +1,7 @@
 package pyramiddemo;
 
 import java.util.Scanner;
+
 import org.json.simple.*;
 
 public class App 
@@ -142,6 +143,28 @@ public class App
     }
   }
 
+  // Block feature Message 1
+  private void printMsg1()
+  {
+    System.out.println("Get 70% off your first month of Nassef's Pyramids!");
+    System.out.println("Gain unlimited translations of heiroglyphic records for only $4.99 a month!");
+    printMenuLine();
+  }
+
+  // Block feature Message 2
+  private void printMsg2(){
+    System.out.println("Subscribe to Nassef's Pyramids Plus to access this feature!");
+    System.out.println("Gain access to unlimited translations of heiroglyphic records for only $4.99 a month!");
+    printMenuLine();
+  }
+
+  // Block feature Message 3
+  private void printMsg3(){
+    System.out.println("To access this feature, subscribe to Nassef's Pyramids!");
+    System.out.println("Gain access to unlimited translations of heiroglyphic records for only $4.99 a month!");
+    printMenuLine();
+  }
+
   private Boolean executeCommand(Scanner scan, Character command) {
     Boolean success = true;
 
@@ -149,12 +172,24 @@ public class App
       case '1':
         printAllPharaoh();
         break;
+      
+      case '2':
+      printMsg1();
+
       case '3':
         printAllPyramids();
         break;
+
+      case '4':
+        printMsg2();
+
+      case '5':
+      printMsg3();
+
       case 'q':
         System.out.println("Thank you for using Nassef's Egyptian Pyramid App!");
         break;
+
       default:
         System.out.println("ERROR: Unknown commmand");
         success = false;
@@ -169,13 +204,12 @@ public class App
 
   private static void printMenuLine() {
     System.out.println(
-      "--------------------------------------------------------------------------"
+      "-------------------------------------------------------"
     );
   }
 
   // prints the menu
   public static void printMenu() {
-    printMenuLine();
     System.out.println("Nassef's Egyptian Pyramids App");
     printMenuLine();
     System.out.printf("Command\t\tDescription\n");
