@@ -38,7 +38,7 @@ public class App
     
     // read egyptian array of pharaohs
     String pharaohFile =
-      "C:/Users/louie/OneDrive/Documents/GitHub/Nassef-s-Egyptian-Pyramids/pyramidapp/src/main/java/pyramiddemo/pharaoh.json";
+      "C:/Users/louie/OneDrive/Documents/GitHub/Pyradex/pyramidapp/src/main/java/pyramiddemo/pharaoh.json";
     JSONArray pharaohJSONArray = JSONFile.readArray(pharaohFile);
 
     // create and intialize the array of pharaohs
@@ -46,7 +46,7 @@ public class App
 
     // read array of pyramids
     String pyramidFile =
-      "C:/Users/louie/OneDrive/Documents/GitHub/Nassef-s-Egyptian-Pyramids/pyramidapp/src/main/java/pyramiddemo/pyramid.json";
+      "C:/Users/louie/OneDrive/Documents/GitHub/Pyradex/pyramidapp/src/main/java/pyramiddemo/pyramid.json";
     JSONArray pyramidJSONArray = JSONFile.readArray(pyramidFile);
 
     // create and initialize the array of pyramids
