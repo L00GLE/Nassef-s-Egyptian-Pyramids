@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import org.json.simple.*;
 
-public class App 
+public class PyradexApp
 {
 
   
@@ -34,7 +34,7 @@ public class App
   }
 
   // constructor
-  public App() {
+  public PyradexApp() {
     
     // read egyptian array of pharaohs
     String pharaohFile =
