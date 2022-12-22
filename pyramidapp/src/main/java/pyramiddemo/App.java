@@ -7,8 +7,7 @@ import org.json.simple.*;
 public class App 
 {
 
-  // I've used two arrays here for O(1) reading of the pharaohs and pyramids.
-  // other structures or additional structures can be used
+  
   protected Pharaoh[] pharaohArray;
   protected Pyramid[] pyramidArray;
 
@@ -34,22 +33,23 @@ public class App
     }
   }
 
-  // constructor to initialize the app and read commands
+  // constructor
   public App() {
-    // read egyptian pharaohs
+    
+    // read egyptian array of pharaohs
     String pharaohFile =
       "C:/Users/louie/OneDrive/Documents/GitHub/Nassef-s-Egyptian-Pyramids/pyramidapp/src/main/java/pyramiddemo/pharaoh.json";
     JSONArray pharaohJSONArray = JSONFile.readArray(pharaohFile);
 
-    // create and intialize the pharaoh array
+    // create and intialize the array of pharaohs
     initializePharaoh(pharaohJSONArray);
 
-    // read pyramids
+    // read array of pyramids
     String pyramidFile =
       "C:/Users/louie/OneDrive/Documents/GitHub/Nassef-s-Egyptian-Pyramids/pyramidapp/src/main/java/pyramiddemo/pyramid.json";
     JSONArray pyramidJSONArray = JSONFile.readArray(pyramidFile);
 
-    // create and initialize the pyramid array
+    // create and initialize the array of pyramids
     initializePyramid(pyramidJSONArray);
 
   }
@@ -64,7 +64,7 @@ public class App
       // get the object
       JSONObject o = (JSONObject) pharaohJSONArray.get(i);
 
-      // parse the json object
+      // parse the json
       Integer id = toInteger(o, "id");
       String name = o.get("name").toString();
       Integer begin = toInteger(o, "begin");
@@ -146,21 +146,21 @@ public class App
   // Block feature Message 1
   private void printMsg1()
   {
-    System.out.println("Get 70% off your first month of Nassef's Pyramids!");
+    System.out.println("Get 70% off your first month of Pyradex!");
     System.out.println("Gain unlimited translations of heiroglyphic records for only $4.99 a month!");
     printMenuLine();
   }
 
   // Block feature Message 2
   private void printMsg2(){
-    System.out.println("Subscribe to Nassef's Pyramids Plus to access this feature!");
+    System.out.println("Subscribe to Pyradex Plus to access this feature!");
     System.out.println("Gain access to unlimited translations of heiroglyphic records for only $4.99 a month!");
     printMenuLine();
   }
 
   // Block feature Message 3
   private void printMsg3(){
-    System.out.println("To access this feature, subscribe to Nassef's Pyramids!");
+    System.out.println("To access this feature, subscribe to Pyradex!");
     System.out.println("Gain access to unlimited translations of heiroglyphic records for only $4.99 a month!");
     printMenuLine();
   }
@@ -187,7 +187,7 @@ public class App
       printMsg3();
 
       case 'q':
-        System.out.println("Thank you for using Nassef's Egyptian Pyramid App!");
+        System.out.println("Thank you for using Pyradex!");
         break;
 
       default:
@@ -210,7 +210,7 @@ public class App
 
   // prints the menu
   public static void printMenu() {
-    System.out.println("Nassef's Egyptian Pyramids App");
+    System.out.println("Welcome to Pyradex");
     printMenuLine();
     System.out.printf("Command\t\tDescription\n");
     System.out.printf("-------\t\t---------------------------------------\n");
